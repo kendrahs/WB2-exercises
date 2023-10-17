@@ -7,4 +7,11 @@ var tip = 12.00;
 var totalDue = foodCost  + tax + tip;
 
 //output
-console.log("The total due is " + totalDue);
+console.log
+    ("Food cost is " + foodCost + " and tax is " + tax + ".");
+
+console.log
+    ("The tip is " + tip.toFixed(2) + ".");
+
+console.log 
+    ("The total is " + totalDue + ".");
