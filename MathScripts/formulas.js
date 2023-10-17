@@ -1,10 +1,7 @@
-//Pages 61-62 examples
-//assets and debts
+//sample inputs
 
-//area of a rectangle
 
-//food bill given tip percentage
+//calculations
 
-//area of a circle
 
-//rule of 72
+//output
