@@ -12,7 +12,7 @@ let filingStatus = "joint"
 
 
 //single filers
-if (filingStatus == single) {
+if (filingStatus == "single") {
     if (annualIncome < 12000) {
         taxRate = 0.05;
     }
@@ -22,17 +22,16 @@ if (filingStatus == single) {
     if (annualIncome < 75000) {
         taxRate = 0.15;
     } 
-    if {
-        (annualIncome > 75000)
+    if ((annualIncome > 75000)) {
         taxRate = 0.20;
     }
-    else {
+    else { 
         ("Error.")
     }
 }
 
 //joint filers
-if (filingStatus == joint) {
+if (filingStatus == "joint") {
     if (annualIncome < 12000) {
         taxRate = 0;
     }
@@ -42,8 +41,7 @@ if (filingStatus == joint) {
     if (annualIncome < 75000) {
         taxRate = 0.11;
     } 
-    if {
-        (annualIncome > 75000)
+    if ((annualIncome > 75000)){
         taxRate = 0.20;
     }
     else {
@@ -56,4 +54,5 @@ var withholding = grossPay - (taxRate/grossPay)
 
 
 //message
-console.log("You worked " + hoursWorked + " at $" + payRate + " an hour. That leads to a gross pay of $" + grossPay +". Because your filing status is " + singleFile + ", your tax withholding this period is $" + + " and you net pay comes out to be $" + + ".")}
+
+console.log(`You worked ${hoursWorked} hours at $${payRate} an hour. That leads to a gross pay of $${grossPay}. Because your filing status is ${filingStatus}, your tax withholding this period is $${withholding.toFixed(2)} and your net pay comes out to be $${(grossPay - withholding).toFixed(2)}.`);
