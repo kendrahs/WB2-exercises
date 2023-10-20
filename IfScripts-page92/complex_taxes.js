@@ -3,35 +3,53 @@
 let payRate = 48;
 let hoursWorked = 43;
 let overtimeHours = hoursWorked - 40
-
 let taxRate;
 
 //calculate gross pay
 let grossPay = (payRate * hoursWorked) + (overtimeHours * payRate * 1.5) * 52;
 let annualIncome = grossPay * 52
+let filingStatus = "joint"
 
 
 //single filers
-var singleFile = false;
-
-if (singleFile == true) {
+if (filingStatus == single) {
     if (annualIncome < 12000) {
-        taxRate = 5;
+        taxRate = 0.05;
     }
-    else if (annualIncome < 24999) {
-        taxRate = 10;
+    if (annualIncome < 25000) {
+        taxRate = 0.10;
     } 
-    else if (annualIncome < 75000) {
-        taxRate = 15;
+    if (annualIncome < 75000) {
+        taxRate = 0.15;
     } 
+    if {
+        (annualIncome > 75000)
+        taxRate = 0.20;
+    }
     else {
-        (annualIncome < 75000)
-        taxRate = 20;
-       
+        ("Error.")
+    }
 }
 
 //joint filers
-
+if (filingStatus == joint) {
+    if (annualIncome < 12000) {
+        taxRate = 0;
+    }
+    if (annualIncome < 25000) {
+        taxRate = 0.06;
+    } 
+    if (annualIncome < 75000) {
+        taxRate = 0.11;
+    } 
+    if {
+        (annualIncome > 75000)
+        taxRate = 0.20;
+    }
+    else {
+        ("Error.")
+    }
+}
 
 //calculate tax based on gross
 var withholding = grossPay - (taxRate/grossPay)
